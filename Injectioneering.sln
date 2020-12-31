@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Injectioneering", "Injectioneering\Injectioneering.csproj", "{E89B6647-55D2-4E57-B364-0186B4C5CC6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E89B6647-55D2-4E57-B364-0186B4C5CC6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E89B6647-55D2-4E57-B364-0186B4C5CC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E89B6647-55D2-4E57-B364-0186B4C5CC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E89B6647-55D2-4E57-B364-0186B4C5CC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3E63878-A3A2-4776-8DDA-D0529AA91344}
+	EndGlobalSection
+EndGlobal
