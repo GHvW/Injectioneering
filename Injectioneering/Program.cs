@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json;
 
 namespace Injectioneering {
+
     class Program {
 
         static void Main(string[] args) {
