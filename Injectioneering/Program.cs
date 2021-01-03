@@ -11,9 +11,15 @@ namespace Injectioneering {
             Console.WriteLine("Hello World!");
 
             var services = new ServiceCollection()
-                //.AddSingleton<Func<string, MyData>>(_ => JsonConvert.DeserializeObject<MyData>)
-                .AddSingleton<Func<string, MyData>>(_ => {
-                    return (str) => JsonSerializer.Deserialize<MyData>(str);
+                //.AddTransient<Func<string, MyData>>(_ => JsonConvert.DeserializeObject<MyData>)
+                .AddTransient<Func<string, MyData>>(_ => {
+                    return (str) => 
+                        JsonSerializer
+                            .Deserialize<MyData>(
+                                str, 
+                                new JsonSerializerOptions() { 
+                                    PropertyNameCaseInsensitive = true 
+                                });
                 })
                 .AddTransient<Handler>()
                 .AddTransient<Func<string, int>>(sp => {
@@ -24,7 +30,9 @@ namespace Injectioneering {
 
             var app = services.GetRequiredService<Application>();
 
-            app.Run();
+            var myData = @"{ ""id"": 1337, ""message"": ""some randome message i might receive"", ""funFact"": ""this might be cool""}";
+
+            Console.WriteLine(app.Run(myData));
         }
     }
 }

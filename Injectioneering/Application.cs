@@ -12,10 +12,9 @@ namespace Injectioneering {
             this.handler = handler;
         } 
 
-        public void Run() {
-            var myData = @"{ id: 1337, message: ""some randome message i might receive"", funFact: ""this might be cool""}";
+        public string Run(string myData) {
             var result = handler(myData);
-            Console.WriteLine($"My data Message length is {result}");
+            return $"My data Message length is {result}";
         }
     }
 }

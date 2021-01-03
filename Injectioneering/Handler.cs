@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 
 namespace Injectioneering {
 
@@ -15,6 +12,8 @@ namespace Injectioneering {
 
         public int Handle(string message) => 
             // JsonConvert.DeserializeObject<MyData>(message).Message.Length;
-            deserialize(message).Message.Length;
+            deserialize(message)
+                .Message
+                .Length;
     }
 }
